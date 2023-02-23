@@ -14,6 +14,7 @@ import { showNotification } from "@mantine/notifications";
 import { fetchVehicles } from "api/vehicles";
 import { AuthContext } from "context/auth-context";
 import { isArrayAndHasContent } from "utils/utils";
+import { useMediaQuery } from "@mantine/hooks";
 
 const NoVehicleFound = () => (
 	<div className="flex flex-col justify-center items-center">
@@ -30,6 +31,9 @@ const NoVehicleFound = () => (
 const Home = (props) => {
 
 	const { vehicles: initVehicles, error } = props;
+
+	const isMobile = useMediaQuery("(max-width: 540px)", true, { getInitialValueInEffect: false });
+	const inputSize = isMobile ? "xs" : "sm";
 
 	const { user } = useContext(AuthContext);
 
@@ -117,13 +121,14 @@ const Home = (props) => {
 	return (
 		<Container size="xl">
 			<div className="flex justify-between bg-slate-900 mb-5 mt-12 p-5 rounded-md">
-				<h1 className="text-white font-bold text-2xl">
+				<h1 className="text-white font-bold text-xl sm:text-2xl">
 					Browse Vehicles
 				</h1>
 				<Button
 					onClick={() => openVehicleCreateModal(null, null)}
 					type="button"
 					className="bg-green-500 text-white font-bold hover:bg-green-600"
+					size={inputSize}
 				>
 					Add Vehicle
 				</Button>
