@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #fff;
+    font-family: "Lato", sans-serif !important;
+}
+
+.accounts-input label {
+	font-size: 14px;
+}
+
+.accounts-input p {
+	color: crimson;
+	margin: 0px;
+	margin-top: 3px;
+	font-size: 12px;
+	font-weight: bold;
+}

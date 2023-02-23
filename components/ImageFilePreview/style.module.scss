@@ -1,0 +1,16 @@
+.ImageFilePreview {
+	position: relative;
+	display: inline-block;
+
+	img {
+		object-fit: cover;
+		border-radius: "5px";
+		box-shadow: "0 0 5px 0 rgba(0, 0, 0, 0.1)";
+	}
+
+	&--icon {
+		position: absolute;
+		top: -5%;
+		right: -5%;
+	}
+}
