@@ -1,5 +1,7 @@
 # Frontend codebase of Click Dealer
 
+To run locally, in your command line run `npm i` and followed by `npm run dev`
+
 Example .env file:
 
 ```
